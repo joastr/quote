@@ -11,15 +11,16 @@ function createTweet(input) {
 	if (!input.quoteAuthor.length) {
 		input.quoteAuthor = "Unknown author";
 	}
-	var tweetText = "Quote of the day - " + input.quoteText + " Author: " + input.quoteAuthor;
+var tweetText = "Quote of the day - " + input.quoteText + " Author: " + input.quoteAuthor;
 	
 	if (tweetText.length > 140) {
 	getQuote();
-		} else {
-		var tweet = tweetLink + encodeURIComponent(tweetText);
-		$('.quote').text(input.quoteText);
-		$('.author').text("Author: " + input.quoteAuthor);
-		$('.tweet').attr('href', tweet);
+	} 
+	else {
+	var tweet = tweetLink + encodeURIComponent(tweetText);
+	$('.quote').text(input.quoteText);
+	$('.author').text("Author: " + input.quoteAuthor);
+	$('.tweet').attr('href', tweet);
 	}
 	$('.tweet').attr('href', tweet);
 }
